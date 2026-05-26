@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BW-Liga & Landesliga Baden-Württemberg</title>
+   <link rel="icon" type="image/svg+xml" href="images/plus_logo.svg">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <script>
+      function openTab(tabId) {
+         document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.add('hidden');
+         });
+
+         document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove(
+               'bg-yellow-400',
+               'text-black'
+            );
+            btn.classList.add(
+               'bg-gray-800',
+               'text-white'
+            );
+         });
+
+         document.getElementById(tabId).classList.remove('hidden');
+
+         document
+            .querySelector(`[data-tab="${tabId}"]`)
+            .classList.remove('bg-gray-800', 'text-white');
+
+         document
+            .querySelector(`[data-tab="${tabId}"]`)
+            .classList.add('bg-yellow-400', 'text-black');
+      }
+
+      window.onload = () => openTab('protokolle');
+   </script>
+</head>
+
+<body class="bg-slate-100 min-h-screen">
+
+   <!-- Header -->
+   <header class="bg-black text-white shadow-lg border-b-4 border-yellow-400">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+         <h1 class="text-3xl font-bold">
+            BW-Liga & Landesliga Baden-Württemberg
+         </h1>
+         <p class="text-gray-300 mt-2">
+            Besprechungen, Beschlüsse und Dokumente
+         </p>
+      </div>
+   </header>
+   <!-- INFO BANNER -->
+   <div class="bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+         <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg shadow-sm p-4">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+               <div>
+                  <p class="font-bold text-gray-900">
+                     📅 Nächste Besprechung: 01.06.2026 um 19:00 Uhr
+                  </p>
+
+                  <p class="text-sm text-gray-700 mt-1">
+                     Online via Google Meet
+                  </p>
+               </div>
+
+               <a href="https://meet.google.com/mhi-igvw-rgy "
+                  class="bg-black text-yellow-400 px-4 py-2 rounded-lg font-semibold hover:bg-gray-900">
+                  Einwahllink 19:00 Uhr
+               </a>
+               <a href="https://meet.google.com/cyp-gcne-kth"
+                  class="bg-black text-yellow-400 px-4 py-2 rounded-lg font-semibold hover:bg-gray-900">
+                  Einwahllink 20:00 Uhr
+               </a>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <main class="max-w-7xl mx-auto px-6 py-8">
+
+      <!-- Navigation -->
+      <div class="flex flex-wrap gap-2 mb-8">
+
+         <button data-tab="protokolle" onclick="openTab('protokolle')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Protokolle
+         </button>
+
+         <button data-tab="kontingent" onclick="openTab('kontingent')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Kontingentspieler
+         </button>
+
+         <button data-tab="durchfuehrung" onclick="openTab('durchfuehrung')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Durchführungsbestimmungen
+         </button>
+
+         <button data-tab="erweiterung" onclick="openTab('erweiterung')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Erweiterung BWL
+         </button>
+
+         <button data-tab="modus" onclick="openTab('modus')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Modus 2026/27
+         </button>
+
+         <button data-tab="vermarktung" onclick="openTab('vermarktung')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Vermarktung
+         </button>
+
+      </div>
+
+      <!-- PROTOKOLLE -->
+      <section id="protokolle" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-5 border-l-4 border-yellow-400 pl-3">
+               Protokolle
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-4">
+               <a href="docs/BWL_LLBW_Teams_Sitzungen_11.05.2026.pdf"
+                  class="border rounded-lg p-4 hover:border-yellow-400 hover:shadow transition">
+                  📄 Teams Sitzung am 11.05.2026
+               </a>
+               <a href="docs/BWL_LLBW_Teams_Sitzungen_27.04.2026.pdf"
+                  class="border rounded-lg p-4 hover:border-yellow-400 hover:shadow transition">
+                  📄 Teams Sitzung am 27.04.2026
+               </a>
+               <a href="docs/BWL_LLBW_Teams_Sitzungen_14.04.2026.pdf"
+                  class="border rounded-lg p-4 hover:border-yellow-400 hover:shadow transition">
+                  📄 Teams Sitzung am 14.04.2026
+               </a>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- KONTINGENTSPIELER -->
+      <section id="kontingent" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-5 border-l-4 border-yellow-400 pl-3">
+               Vereinbarung zum Einsatz von Kontingentspielern
+            </h2>
+
+            <div class="space-y-3">
+               <a href="docs/Vereinbarung_zum_Einsatz_von_Kontingentspielern_11.05.2026.pdf"
+                  class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Vereinbarung Kontingentspieler (Fassung von 11.05.2026)
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <!-- DURCHFÜHRUNGSBESTIMMUNGEN -->
+      <section id="durchfuehrung" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-5 border-l-4 border-yellow-400 pl-3">
+               Vereinbarte Änderungen der Durchführungsbestimmungen
+            </h2>
+
+            <div class="space-y-3">
+               <a href="docs/Anpassung_DfB_2026.pdf" class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Anpasssungen der Durchführungsbestimmungen
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <!-- ERWEITERUNG -->
+      <section id="erweiterung" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+
+            <h2 class="text-2xl font-bold mb-6 border-l-4 border-yellow-400 pl-3">
+               Abstimmung zur Erweiterung der BW-Liga (EHC Lauterbach)
+            </h2>
+
+            <div class="space-y-3">
+               <a href="docs/bwl_extension/Erweiterung_BWL_Lauterbach_Vorlage.pdf"
+                  class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Vorlage
+               </a>
+            </div>
+            <br>
+            <div class="overflow-x-auto">
+
+               <table class="w-full border-collapse">
+
+                  <thead>
+                     <tr class="bg-black text-white">
+                        <th class="p-3 text-left">Verein</th>
+                        <th class="p-3 text-left">Zustimmung</th>
+                        <th class="p-3 text-left">Unterschrift</th>
+                     </tr>
+                  </thead>
+
+                  <tbody>
+
+                     <tr class="border-b">
+                        <td class="p-3">EC Eppelheim</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/EC_Epelheim.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">ESC Hügelsheim</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/ESC_Hügelsheim.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">Heilbronner EC</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/Heilbronner_EC.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">Mad Dogs Mannheim</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/Maddogs_ Mannheim.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">1.CFR Pforzheim</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/1CFR_Pforzheim.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">TSG Reutlingen</td>
+                        <td class="p-3">
+                           <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="ddocs/bwl_extension/TSG_Reutlingen.pdf" class="text-blue-600">
+                              📕
+                           </a>
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">Schwenninger ERC</td>
+                        <td class="p-3">
+                           <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full">
+                              Nein
+                           </span>
+                        </td>
+                        <td class="p-3">
+
+                        </td>
+                     </tr>
+                     <tr class="border-b">
+                        <td class="p-3">EHC Zweibrücken</td>
+                        <td class="p-3">
+                           <span class="bg-yellow-100 text-green-700 px-3 py-1 rounded-full">
+                              Ja
+                           </span>
+                        </td>
+                        <td class="p-3">
+                           <a href="docs/bwl_extension/Zweibrücken_Alte_Version.pdf" class="text-blue-600">
+                              📕 (alte Fassung)
+                           </a>
+                        </td>
+                     </tr>
+
+                     <!-- Weitere Teams -->
+
+                  </tbody>
+
+               </table>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- MODUS -->
+      <section id="modus" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-5 border-l-4 border-yellow-400 pl-3">
+               Modus Saison 2026/27
+            </h2>
+
+            <!--div class="space-y-3">
+               <a href="#" class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Modusvorschlag A
+               </a>
+
+               <a href="#" class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Beschlossener Modus
+               </a>
+            </div-->
+         </div>
+      </section>
+
+      <!-- VERMARKTUNG -->
+      <section id="vermarktung" class="tab-content hidden">
+         <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-2xl font-bold mb-5 border-l-4 border-yellow-400 pl-3">
+               Vermarktung der Liga
+            </h2>
+
+            <!--div class="space-y-3">
+               <a href="#" class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Marketingkonzept
+               </a>
+
+               <a href="#" class="block border p-4 rounded-lg hover:border-yellow-400">
+                  📄 Sponsorenkonzept
+               </a>
+            </div-->
+         </div>
+      </section>
+
+   </main>
+
+</body>
+
+</html>
