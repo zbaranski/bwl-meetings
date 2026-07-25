@@ -55,7 +55,24 @@
    </header>
    <!-- INFO BANNER -->
    <div class="bg-slate-100">
-      <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="max-w-7xl mx-auto px-6 py-2">
+         <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg shadow-sm p-4">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+               <div>
+                  <p class="font-bold text-gray-900">
+                     🗓️ Rahmenplan für Saison 2026-27
+                  </p>
+               </div>
+               <a href="https://docs.google.com/spreadsheets/d/1pqcp39BIkBWZgw3mD3gu0QQ9arE-qI4m5S0ffttmyHA/edit?usp=sharing"
+                  class="bg-black text-yellow-400 px-4 py-2 rounded-lg font-semibold hover:bg-gray-900">
+                  Rahmenplan
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-2">
          <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg shadow-sm p-4">
             <div class="flex items-center justify-between flex-wrap gap-3">
                <div>
@@ -72,7 +89,7 @@
       </div>
    </div>
    <div class="bg-slate-100">
-      <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="max-w-7xl mx-auto px-6 py-2">
          <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg shadow-sm p-4">
             <div class="flex items-center justify-between flex-wrap gap-3">
                <div>
@@ -98,6 +115,11 @@
             Protokolle
          </button>
 
+         <button data-tab="modus" onclick="openTab('modus')"
+            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
+            Modus 2026/27
+         </button>
+
          <button data-tab="kontingent" onclick="openTab('kontingent')"
             class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
             Kontingentspieler
@@ -112,11 +134,6 @@
             class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
             Erweiterung BWL
          </button-->
-
-         <button data-tab="modus" onclick="openTab('modus')"
-            class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
-            Modus 2026/27
-         </button>
 
          <button data-tab="vermarktung" onclick="openTab('vermarktung')"
             class="tab-btn px-5 py-3 rounded-lg font-semibold transition">
@@ -180,9 +197,50 @@
                </a>
             </div>
 
+            <!-- Tabelle für geschützte Spieler -->
+            <h3 class="text-xl font-bold mt-8 mb-4">Geschützte Spieler für Saison 2026/27</h3>
+            <div class="overflow-x-auto">
+               <table class="min-w-full border-collapse border border-gray-300">
+                  <thead class="bg-gray-100">
+                     <tr>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Team</th>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Geschützte Spieler</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">HEC Eisbären</td>
+                        <td class="border border-gray-300 px-4 py-2">Jere Liiberg</td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">EHC ZWeibrücken "Hornets"</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">Pforzheim</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">Mad Dogs Mannheim</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">Schwenningen</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">Eisbären Eppelheim</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                     <tr>
+                        <td class="border border-gray-300 px-4 py-2">Black Eagles Reutlingen</td>
+                        <td class="border border-gray-300 px-4 py-2"> </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
          </div>
       </section>
-
       <!-- DURCHFÜHRUNGSBESTIMMUNGEN -->
       <section id="durchfuehrung" class="tab-content hidden">
          <div class="bg-white rounded-xl shadow p-6">
@@ -206,6 +264,11 @@
             </h2>
 
             <div class="grid md:grid-cols-2 gap-4">
+               <a href="https://docs.google.com/spreadsheets/d/1pqcp39BIkBWZgw3mD3gu0QQ9arE-qI4m5S0ffttmyHA/edit?usp=sharing"
+                  class="block border p-4 rounded-lg hover:border-yellow-400">
+                  🗓️ Rahmenplan für Saison 2026-27
+               </a>
+               <a> </a>
                <a href="docs/BWL Modus.pdf" class="block border p-4 rounded-lg hover:border-yellow-400">
                   📄 BWL Modus
                </a>
